@@ -1,10 +1,9 @@
-package com.example.myapplication.ui;
+package com.example.myapplication.ui.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -15,12 +14,11 @@ import com.example.myapplication.R;
 import com.example.myapplication.model.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class NewAccountActivity extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
 
     EditText fullname, usernamee, email, passwordd;
     Button createnewaccount;
@@ -29,7 +27,7 @@ public class NewAccountActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_account);
+        setContentView(R.layout.activity_signup);
         mAuth = FirebaseAuth.getInstance();
         //==========================================================
         fullname = findViewById(R.id.fullname);
@@ -45,16 +43,16 @@ public class NewAccountActivity extends AppCompatActivity {
             String password = passwordd.getText().toString();
 
             if ((name.isEmpty()) || (username.isEmpty()) || (emaill.isEmpty()) || (password.isEmpty())) {
-                Toast.makeText(NewAccountActivity.this, "Please Enter Full Date", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignupActivity.this, "Please Enter Full Date", Toast.LENGTH_SHORT).show();
             }
             // if email address doesn't match the email pattern --> example@abcd.com
             else if (!Patterns.EMAIL_ADDRESS.matcher(emaill).matches()) {
-                Toast.makeText(NewAccountActivity.this, "Please Enter Correct Email", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignupActivity.this, "Please Enter Correct Email", Toast.LENGTH_SHORT).show();
 
             }
             // if passwords less than 6 characters
             else if (password.length() < 6) {
-                Toast.makeText(NewAccountActivity.this, "Password at least 6 characters", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignupActivity.this, "Password at least 6 characters", Toast.LENGTH_SHORT).show();
 
             }
             // Check if Edit text empty or not ( TextUtils works as isEmpty)
@@ -84,15 +82,15 @@ public class NewAccountActivity extends AppCompatActivity {
                                         @Override
                                         public void onComplete(Task<Void> task) {
                                             if (task.isSuccessful()) {
-                                                Toast.makeText(NewAccountActivity.this, "Sign Up Successfully", Toast.LENGTH_LONG).show();
-                                                Intent intent = new Intent(NewAccountActivity.this, LoginActivity.class);
+                                                Toast.makeText(SignupActivity.this, "Sign Up Successfully", Toast.LENGTH_LONG).show();
+                                                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                                                 startActivity(intent);
                                                 finish();
                                             }
                                             // if user doesn't sign up
                                             else {
 
-                                                Toast.makeText(NewAccountActivity.this, "Sign Up Failed, Try Again!", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(SignupActivity.this, "Sign Up Failed, Try Again!", Toast.LENGTH_LONG).show();
 
 
                                             }
@@ -102,7 +100,7 @@ public class NewAccountActivity extends AppCompatActivity {
                         } else {
                             // if the task doesn't complete
 
-                            Toast.makeText(NewAccountActivity.this, "Sign Up Failed", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignupActivity.this, "Sign Up Failed", Toast.LENGTH_LONG).show();
 
                         }
                     });

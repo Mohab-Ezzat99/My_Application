@@ -3,8 +3,10 @@ package com.example.myapplication.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity
-public class MedicineModel {
+public class MedicineModel implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
@@ -13,8 +15,7 @@ public class MedicineModel {
     private String purpose;
     private String price;
 
-    public MedicineModel(int id, String name, int img, String uses, String purpose, String price) {
-        this.id = id;
+    public MedicineModel(String name, int img, String uses, String purpose, String price) {
         this.name = name;
         this.img = img;
         this.uses = uses;

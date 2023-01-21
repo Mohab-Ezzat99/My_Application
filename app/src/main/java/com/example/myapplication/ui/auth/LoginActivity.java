@@ -1,4 +1,4 @@
-package com.example.myapplication.ui;
+package com.example.myapplication.ui.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,13 +13,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import com.example.myapplication.ui.HomeActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
@@ -44,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         //===========================================================
         // Go to Create account activity
         create.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, NewAccountActivity.class);
+            Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
             startActivity(intent);
         });
         //===========================================================
