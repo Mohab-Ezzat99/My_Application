@@ -61,7 +61,7 @@ public class CartActivity extends AppCompatActivity implements MedicineAdapter.O
                 for (MedicineModel item : medicineModels) {
                     total += item.getPrice();
                 }
-                tv_total.setText(total + "SAR");
+                tv_total.setText(total + " SAR");
             }
         });
     }

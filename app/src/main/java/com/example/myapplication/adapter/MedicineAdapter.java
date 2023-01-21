@@ -37,7 +37,7 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.Medici
         MedicineModel item = list.get(holder.getAdapterPosition());
         holder.iv_img.setImageResource(item.getImg());
         holder.tv_name.setText(item.getName());
-        holder.tv_price.setText(String.valueOf(item.getPrice()));
+        holder.tv_price.setText(item.getPrice() +" SAR");
         holder.itemView.setOnClickListener(v -> listener.onItemClick(item));
 
         if (canDelete) holder.iv_delete.setVisibility(View.VISIBLE);

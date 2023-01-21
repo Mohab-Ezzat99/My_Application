@@ -37,7 +37,7 @@ public class MedicineDetailsActivity extends AppCompatActivity {
         MedicineModel medicineModel = (MedicineModel) getIntent().getSerializableExtra("medicine");
         iv_img.setImageResource(medicineModel.getImg());
         tv_name.setText(medicineModel.getName());
-        tv_price.setText(medicineModel.getPrice() + "SAR");
+        tv_price.setText(medicineModel.getPrice() + " SAR");
         tv_uses.setText(medicineModel.getUses());
         tv_purpose.setText(medicineModel.getPurpose());
 
