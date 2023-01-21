@@ -22,6 +22,7 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.Medici
     private List<MedicineModel> list = new ArrayList<>();
     private List<MedicineModel> searchList = new ArrayList<>(list);
     private OnItemClickListener listener;
+    private boolean canDelete = false;
 
     @SuppressLint("InflateParams")
     @NonNull
@@ -36,8 +37,12 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.Medici
         MedicineModel item = list.get(holder.getAdapterPosition());
         holder.iv_img.setImageResource(item.getImg());
         holder.tv_name.setText(item.getName());
-        holder.tv_price.setText(item.getPrice());
+        holder.tv_price.setText(String.valueOf(item.getPrice()));
         holder.itemView.setOnClickListener(v -> listener.onItemClick(item));
+
+        if (canDelete) holder.iv_delete.setVisibility(View.VISIBLE);
+        else holder.iv_delete.setVisibility(View.GONE);
+        holder.iv_delete.setOnClickListener(v -> listener.onDeleteClick(item));
     }
 
     @Override
@@ -48,6 +53,11 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.Medici
     public void setList(List<MedicineModel> list) {
         this.list = list;
         this.searchList = new ArrayList<>(list);
+        this.notifyDataSetChanged();
+    }
+
+    public void setCanDelete(boolean canDelete) {
+        this.canDelete = canDelete;
         this.notifyDataSetChanged();
     }
 
@@ -87,6 +97,7 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.Medici
 
     static class MedicineViewHolder extends RecyclerView.ViewHolder {
 
+        private final ImageView iv_delete;
         private final ImageView iv_img;
         private final TextView tv_name;
         private final TextView tv_price;
@@ -94,6 +105,7 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.Medici
         public MedicineViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            iv_delete = itemView.findViewById(R.id.iv_delete);
             iv_img = itemView.findViewById(R.id.iv_img);
             tv_name = itemView.findViewById(R.id.tv_name);
             tv_price = itemView.findViewById(R.id.tv_price);
@@ -103,5 +115,7 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.Medici
 
     public interface OnItemClickListener {
         void onItemClick(MedicineModel medicineModel);
+
+        void onDeleteClick(MedicineModel medicineModel);
     }
 }

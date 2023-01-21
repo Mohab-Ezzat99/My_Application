@@ -13,9 +13,9 @@ public class MedicineModel implements Serializable {
     private int img;
     private String uses;
     private String purpose;
-    private String price;
+    private int price;
 
-    public MedicineModel(String name, int img, String uses, String purpose, String price) {
+    public MedicineModel(String name, int img, String uses, String purpose, int price) {
         this.name = name;
         this.img = img;
         this.uses = uses;
@@ -63,11 +63,11 @@ public class MedicineModel implements Serializable {
         this.purpose = purpose;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }

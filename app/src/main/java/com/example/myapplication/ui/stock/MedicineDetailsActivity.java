@@ -6,13 +6,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myapplication.R;
+import com.example.myapplication.ViewModel;
 import com.example.myapplication.model.MedicineModel;
 
 public class MedicineDetailsActivity extends AppCompatActivity {
 
-    private ImageView iv_img;
+    private ViewModel viewModel;private ImageView iv_img;
     private TextView tv_name;
     private TextView tv_price;
     private TextView tv_uses;
@@ -24,6 +26,7 @@ public class MedicineDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicine_details);
 
+        viewModel = new ViewModelProvider(this).get(ViewModel.class);
         iv_img = findViewById(R.id.iv_img);
         tv_name = findViewById(R.id.tv_name);
         tv_price = findViewById(R.id.tv_price);
@@ -34,11 +37,12 @@ public class MedicineDetailsActivity extends AppCompatActivity {
         MedicineModel medicineModel = (MedicineModel) getIntent().getSerializableExtra("medicine");
         iv_img.setImageResource(medicineModel.getImg());
         tv_name.setText(medicineModel.getName());
-        tv_price.setText(medicineModel.getPrice());
+        tv_price.setText(medicineModel.getPrice() + "SAR");
         tv_uses.setText(medicineModel.getUses());
         tv_purpose.setText(medicineModel.getPurpose());
 
         tv_addToCart.setOnClickListener(v -> {
+            viewModel.insertCartMedicines(medicineModel);
             Toast.makeText(this, "Added Successfully", Toast.LENGTH_SHORT).show();
         });
 

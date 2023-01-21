@@ -55,4 +55,9 @@ public class StockActivity extends AppCompatActivity implements MedicineAdapter.
         intent.putExtra("medicine", medicineModel);
         startActivity(intent);
     }
+
+    @Override
+    public void onDeleteClick(MedicineModel medicineModel) {
+
+    }
 }

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.example.myapplication.model.MedicineModel;
@@ -16,7 +17,7 @@ import io.reactivex.rxjava3.core.Completable;
 @Dao
 public interface AppDao {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     Completable insertMessage(MessageModel device);
 
     @Query("SELECT * FROM MessageModel")
@@ -28,7 +29,7 @@ public interface AppDao {
     // Stock
     //============================================================================================//
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     Completable insertCartMedicines(MedicineModel medicine);
 
     @Query("SELECT * FROM MedicineModel")
