@@ -106,8 +106,14 @@ public class ChatActivity extends AppCompatActivity {
 
             case R.id.menu_senderType:
                 isDoctor = !isDoctor;
-                if (isDoctor) item.setIcon(R.drawable.ic_doctor);
-                else item.setIcon(R.drawable.ic_patient);
+                if (isDoctor) {
+                    setTitle("Doctor");
+                    item.setIcon(R.drawable.ic_doctor);
+                }
+                else {
+                    setTitle("User");
+                    item.setIcon(R.drawable.ic_patient);
+                }
                 break;
         }
 

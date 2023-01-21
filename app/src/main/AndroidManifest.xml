@@ -36,7 +36,7 @@
         </activity>
         <activity
             android:name=".ui.ChatActivity"
-            android:label="Chat doctor"
+            android:label="User"
             android:parentActivityName=".ui.HomeActivity"
             android:exported="false">
             <meta-data

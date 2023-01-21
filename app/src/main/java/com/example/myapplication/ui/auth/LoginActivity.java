@@ -59,9 +59,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Calling the function LoginVerify
-                loginverfiy();
-//                startActivity(new Intent(getBaseContext(), HomeActivity.class));
-//                finish();
+//                loginverfiy();
+                startActivity(new Intent(getBaseContext(), HomeActivity.class));
+                finish();
             }
 
             private void loginverfiy() {
