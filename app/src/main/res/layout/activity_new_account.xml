@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BFD6E8"
+    tools:context=".ui.NewAccountActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:src="@drawable/enrollment"
+                android:layout_marginLeft="130dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                />
+
+
+
+            <EditText
+                android:id="@+id/fullname"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/fullname"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/usernamee"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                tools:ignore="RtlSymmetry" />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                tools:ignore="RtlSymmetry" />
+            <EditText
+                android:id="@+id/passwordd"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                tools:ignore="Autofill,MissingConstraints,RtlSymmetry"
+                />
+
+            <Button
+                android:id="@+id/createnewaccount"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/create"
+                android:layout_marginStart="80dp"
+                android:background="@drawable/button_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="17sp"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</ScrollView>
+
+
+
+

@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Care Zone</string>
+    <string name="todo">TODO</string>
+    <string name="string_todo" />
+    <string name="patientname">Patient Name</string>
+    <string name="patientID">Patient ID</string>
+    <string name="phone">Phone</string>
+    <string name="disease">Disease Name</string>
+    <string name="diagonses">Diagonses</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="doctorname">Doctor Name</string>
+    <string name="dateincome">Date Income</string>
+    <string name="dateoutcome">Date Outcome</string>
+    <string name="save">Save</string>
+    <string name="todoo">TODO</string>
+    <string name="records">Records</string>
+    <string name="textview" />
+    <string name="welcome">Welcome,</string>
+    <string name="Medical">To Medical Record</string>
+    <string name="ID">"ID: "</string>
+    <string name="name">Name:</string>
+    <string name="ddisease">Disease:</string>
+    <string name="ddiagnoses">Diagnoses:</string>
+    <string name="ddateincome">Date In Come:</string>
+    <string name="ddateoutcome">Date Out Come:</string>
+    <string name="username">Username</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create">Create New Account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="namee">Name</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="fullname">Full Name</string>
+    <string name="appointement">Make Your Appointment Now !</string>
+    <string name="department">Department</string>
+    <string name="date">Date</string>
+    <string name="book">Book Now</string>
+    <string name="enterpatient">Enter As Patient</string>
+    <string name="or">OR</string>
+    <string name="medical">Enter As Medical Staff</string>
+    <string name="appointements">Appointments</string>
+    <string name="varification">Varification!</string>
+    <string name="medicalpass">Enter Password As Medical Staff</string>
+    <string name="Enter">Enter</string>
+    <string name="verification">Verification!</string>
+    <string name="logout">Logout</string>
+
+    <string-array name="items">
+        <item>Choose Department</item>
+        <item>Cardiology</item>
+        <item>Diagnostic Imaging</item>
+        <item>General surgery</item>
+        <item>Haematology</item>
+        <item>Nephrology</item>
+        <item>Neurology</item>
+        <item>Oncology</item>
+        <item>Ophthalmology</item>
+        <item>Orthopaedics</item>
+        <item>Pharmacy</item>
+        <item>Physiotherapy</item>
+    </string-array>
+
+
+</resources>

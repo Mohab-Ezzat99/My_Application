@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+    </style>
+    <style name="textstyle1">
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginRight">270dp</item>
+    </style>
+    <style name="textstyle2">
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_marginRight">270dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+
+    </style>
+    <style name="imgstyle">
+
+        <item name="android:layout_marginTop">125dp</item>
+        <item name="android:layout_marginLeft">340dp</item>
+
+    </style>
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="colorPrimary">#6A674F</item>
+
+    </style>
+    <style name="Buttoncolor" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">#F8E862</item>
+
+    </style>
+
+    <style name="listview" parent="Theme.MaterialComponents" >
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginRight">3dp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="lvedit" parent="Theme.MaterialComponents">
+    <item name="colorPrimary">#000000</item>
+    </style>
+    <style name="login" parent="Theme.MaterialComponents">
+    <item name="colorPrimary">#FECE2F</item>
+    </style>
+    <style name="create" parent="Theme.MaterialComponents">
+    <item name="colorPrimary">#FFE17D</item>
+    </style>
+</resources>
