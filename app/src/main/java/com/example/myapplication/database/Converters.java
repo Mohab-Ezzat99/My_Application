@@ -12,8 +12,8 @@ import java.util.List;
 public class Converters {
 
     @TypeConverter
-    public String convertToMessageString(List<MessageModel> productModels){
-        return new Gson().toJson(productModels);
+    public String convertToMessageString(List<MessageModel> messageModels){
+        return new Gson().toJson(messageModels);
     }
 
     @TypeConverter

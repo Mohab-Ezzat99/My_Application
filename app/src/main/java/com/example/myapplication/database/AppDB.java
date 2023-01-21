@@ -6,11 +6,12 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
+
+import com.example.myapplication.model.MedicineModel;
 import com.example.myapplication.model.MessageModel;
-import com.example.myapplication.model.ProductModel;
 
 @Database(
-        entities = {MessageModel.class,ProductModel.class},
+        entities = {MessageModel.class, MedicineModel.class},
         version = 1,
         exportSchema = false
 )
