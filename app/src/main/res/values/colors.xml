@@ -11,4 +11,11 @@
     <color name="font">#7C7885</color>
     <color name="button">#0DF5E3</color>
     <color name="txt">#5C5277</color>
+
+    <color name="back">#7F57C6</color>
+    <color name="card_background">#E9E6EF</color>
+    <color name="btn">#1E5CF5</color>
+    <color name="blue">#6F62D8</color>
+    <color name="bmi">#c0d6f7</color>
+    <color name="pink">#E91E63</color>
 </resources>

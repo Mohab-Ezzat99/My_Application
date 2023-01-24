@@ -33,10 +33,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //===========================================================
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
-        create = findViewById(R.id.signup);
-        login = findViewById(R.id.login);
+        email = findViewById(R.id.email_log_pat);
+        password = findViewById(R.id.edt_pass_pat);
+        create = findViewById(R.id.tv_signup_pat);
+        login = findViewById(R.id.btn_log_pat);
         fireAuth = FirebaseAuth.getInstance();
         //===========================================================
         // Go to Create account activity
@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         topanimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomanim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
         //load button and text to apply animation
-        create = findViewById(R.id.signup);
+        create = findViewById(R.id.tv_signup_pat);
         // Apply animation
         create.setAnimation(bottomanim);
 

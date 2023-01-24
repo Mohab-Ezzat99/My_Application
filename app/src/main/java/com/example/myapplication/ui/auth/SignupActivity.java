@@ -9,11 +9,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.R;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignupActivity extends AppCompatActivity {
 
-    EditText et_fullName, et_username, et_email, et_password;
+    EditText et_fullName;
+    TextInputEditText et_username, et_email, et_password;
     Button btn_createAccount;
     FirebaseAuth mAuth;
 
@@ -23,11 +25,11 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         mAuth = FirebaseAuth.getInstance();
         //==========================================================
-        et_fullName = findViewById(R.id.fullname);
-        et_username = findViewById(R.id.usernamee);
-        et_email = findViewById(R.id.email);
-        et_password = findViewById(R.id.passwordd);
-        btn_createAccount = findViewById(R.id.createnewaccount);
+        et_fullName = findViewById(R.id.fullname_pat_reg);
+        et_username = findViewById(R.id.username_reg_pat);
+        et_email = findViewById(R.id.pat_reg_email);
+        et_password = findViewById(R.id.pat_reg_pass);
+        btn_createAccount = findViewById(R.id.btn_sgn_up_pat_reg);
         //==========================================================
         btn_createAccount.setOnClickListener(v -> {
             final String name = et_fullName.getText().toString().trim();
