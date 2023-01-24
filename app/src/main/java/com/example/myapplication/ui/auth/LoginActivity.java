@@ -59,9 +59,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Calling the function LoginVerify
-//                loginverfiy();
-                startActivity(new Intent(getBaseContext(), HomeActivity.class));
-                finish();
+                loginverfiy();
             }
 
             private void loginverfiy() {
@@ -102,10 +100,8 @@ public class LoginActivity extends AppCompatActivity {
                             // if it's login successful
                             if (task.isSuccessful()) {
                                 Toast.makeText(LoginActivity.this, "Welcome! Login Successfully", Toast.LENGTH_LONG).show();
-                                //Intent intent = new Intent(Login.this,ChooseActivity.class);
-                                //startActivity(intent);
+                                startActivity(new Intent(getBaseContext(), HomeActivity.class));
                                 finish();
-
                             }
                             // Else password and email is not correct show toast with Failure
                             else {
