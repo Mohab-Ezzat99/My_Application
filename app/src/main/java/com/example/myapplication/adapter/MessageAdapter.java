@@ -5,10 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.myapplication.R;
 import com.example.myapplication.model.MessageModel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,14 +32,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ClientVi
         holder.tv_doctor_message.setText(item.getMessage());
 
         if (item.getSenderType() == 0) {
-            holder.tv_patient_message.setVisibility(View.INVISIBLE);
-            holder.tv_doctor_message.setVisibility(View.VISIBLE);
-            holder.tv_doctor_message.setText(item.getMessage());
-        }
-        else {
             holder.tv_doctor_message.setVisibility(View.INVISIBLE);
             holder.tv_patient_message.setVisibility(View.VISIBLE);
-            holder.tv_patient_message.setText(item.getMessage());
+            holder.tv_patient_message.setText("User: " + item.getMessage());
+        }
+        else {
+            holder.tv_patient_message.setVisibility(View.INVISIBLE);
+            holder.tv_doctor_message.setVisibility(View.VISIBLE);
+            holder.tv_doctor_message.setText("Doctor: " + item.getMessage());
         }
 
     }

@@ -46,6 +46,34 @@
     <string name="Enter">Enter</string>
     <string name="verification">Verification!</string>
     <string name="logout">Logout</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="_18_5_25_kg_m2">18.5 – 25 kg/m2</string>
+    <string name="normal_bmi_range">Normal BMI range:</string>
+    <string name="recalculate">Recalculate your BMI</string>
+    <string name="calculate">Calculate your BMI</string>
+    <string name="age">AGE</string>
+    <string name="plus">plus</string>
+    <string name="minus">minus</string>
+    <string name="_0cm">0cm</string>
+    <string name="_50">50</string>
+    <string name="_19">19</string>
+    <string name="your_result">Your Result</string>
+    <string name="your_age">Your Age</string>
+    <string name="cm">cm</string>
+    <string name="drugs">Drugs</string>
+    <string name="druginteract">Drugs Interaction</string>
+    <string name="bmi">BMI Calculator</string>
+    <string name="vitamin">Vitamins</string>
+    <string name="notification">Notifications</string>
+    <string name="tempreture">Tempreture</string>
+    <string name="txt_auto_drug1">Enter Drug Name</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="chat">Chat</string>
+    <string name="stock">Stock</string>
 
     <string-array name="items">
         <item>Choose Department</item>

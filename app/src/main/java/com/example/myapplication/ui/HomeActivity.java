@@ -2,9 +2,10 @@ package com.example.myapplication.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.example.myapplication.R;
 import com.example.myapplication.ui.stock.CartActivity;
 import com.example.myapplication.ui.stock.StockActivity;
@@ -12,8 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private ImageView ivChat;
-    private ImageView ivStock;
+    private CardView cvChat, cvStock, cvBmi;
     private FloatingActionButton fabCart;
 
     @Override
@@ -21,12 +21,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ivChat=findViewById(R.id.iv_chat);
-        ivStock=findViewById(R.id.iv_stock);
-        fabCart=findViewById(R.id.fab_cart);
+        cvChat = findViewById(R.id.chat_card);
+        cvStock = findViewById(R.id.stock_card);
+        cvBmi = findViewById(R.id.bmi_card);
+        fabCart = findViewById(R.id.fab_cart);
 
-        ivChat.setOnClickListener(v -> startActivity(new Intent(getBaseContext(), ChatActivity.class)));
-        ivStock.setOnClickListener(v -> startActivity(new Intent(getBaseContext(), StockActivity.class)));
+        cvChat.setOnClickListener(v -> startActivity(new Intent(getBaseContext(), ChatActivity.class)));
+        cvStock.setOnClickListener(v -> startActivity(new Intent(getBaseContext(), StockActivity.class)));
+        cvBmi.setOnClickListener(v -> startActivity(new Intent(getBaseContext(), BmiCalculatorActivity.class)));
         fabCart.setOnClickListener(v -> startActivity(new Intent(getBaseContext(), CartActivity.class)));
 
     }

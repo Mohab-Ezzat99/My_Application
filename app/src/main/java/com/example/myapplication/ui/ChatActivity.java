@@ -25,7 +25,7 @@ public class ChatActivity extends AppCompatActivity {
     private EditText etMessage;
     private RecyclerView rvMessage;
     private MessageAdapter messageAdapter = new MessageAdapter();
-    private boolean isDoctor = false;
+    private boolean isDoctor = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

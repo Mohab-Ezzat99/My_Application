@@ -54,6 +54,7 @@ public class SignupActivity extends AppCompatActivity {
             mAuth.fetchSignInMethodsForEmail(email).addOnSuccessListener(signInMethodQueryResult -> mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task1 -> {
                 if (task1.isSuccessful()) {
                     Toast.makeText(getBaseContext(), "Signup successfully", Toast.LENGTH_SHORT).show();
+                    finish();
                 } else
                     Toast.makeText(getBaseContext(), "Error! " + task1.getException(), Toast.LENGTH_LONG).show();
             })).addOnFailureListener(e -> {
